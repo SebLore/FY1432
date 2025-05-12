@@ -4,3 +4,9 @@
 [submodule "Billiards/external/stb"]
 	path = Billiards/external/stb
 	url = https://github.com/nothings/stb
+[submodule "Billiards/external/glm"]
+	path = Billiards/external/glm
+	url = https://github.com/g-truc/glm
+[submodule "Billiards/external/assimp"]
+	path = Billiards/external/assimp
+	url = https://github.com/assimp/assimp
