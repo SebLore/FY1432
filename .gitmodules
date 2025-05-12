@@ -1,0 +1,6 @@
+[submodule "Billiards/external/imgui"]
+	path = Billiards/external/imgui
+	url = https://github.com/ocornut/imgui
+[submodule "Billiards/external/stb"]
+	path = Billiards/external/stb
+	url = https://github.com/nothings/stb
