@@ -13,7 +13,7 @@ class Camera
 public:
     Camera();
     ~Camera();
-
+    
     Camera(const Camera& camera);
     Camera& operator=(const Camera& camera);
     Camera(Camera && camera)noexcept;

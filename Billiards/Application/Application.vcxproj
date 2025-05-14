@@ -88,7 +88,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="src\Camera.cpp">
+    <ClCompile Include="Camera.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
-    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="include\glm_test.h" />
     <ClInclude Include="include\ImGuiWrapper.h" />
     <ClInclude Include="Shader.h" />
