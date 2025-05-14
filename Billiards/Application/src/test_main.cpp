@@ -34,7 +34,9 @@ const char* fragmentShaderSource = R"glsl(
     }
 )glsl";
 
-
+// Error callback function
+// This function is called whenever GLFW encounters an error.
+// It prints the error message to stderr.
 static void glfw_error_callback(int error, const char* description)
 {
 	fprintf(stderr, "GLFW Error %d: %s\n", error, description);
@@ -64,8 +66,10 @@ void processInput(GLFWwindow* window)
 
 int main(int, char**)
 {
-	// Initialize GLFW
+	// --- GLFW Initialization ---
+	// Set error callback, this will be called on error
 	glfwSetErrorCallback(glfw_error_callback);
+	// Initialize GLFW, this will create a window and OpenGL context to render to
 	if (!glfwInit()) {
 		return -1;
 	}
@@ -76,11 +80,21 @@ int main(int, char**)
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Use the core profile, no legacy features
 
 	// Create a window with graphics context
-	GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Triangle", NULL, NULL);
+	// aspect ratio 4:3 -> height is 0.75 height
+	glfwWindowHint(GLFW_RESIZABLE, GL_TRUE); // Allow window resizing
+	glfwWindowHint(GLFW_DECORATED, GL_TRUE); // Allow window decorations
+
+	GLFWwindow* window = glfwCreateWindow(960, 720, "OpenGL Triangle", NULL, NULL);
 	if (window == NULL) {
 		glfwTerminate();
 		return -1;
 	}
+	float xscale, yscale;
+	glfwGetMonitorContentScale(glfwGetPrimaryMonitor(), &xscale, &yscale);
+	glfwSetWindowSize(window, 960 * xscale, 720 * yscale); // Set window size to 800x600
+
+	float dpi_scale = (xscale + yscale) * 0.5f;
+
 	glfwMakeContextCurrent(window);
 	glfwSwapInterval(1); // Enable vsync
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); // Set the framebuffer size callback to resize the viewport
@@ -93,7 +107,7 @@ int main(int, char**)
 
 	// --- Shader Compilation ---
 	// Vertex Shader
-	unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	glCompileShader(vertexShader);
 	int success;
@@ -105,7 +119,7 @@ int main(int, char**)
 	}
 
 	// Fragment Shader
-	unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 	glCompileShader(fragmentShader);
 	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
@@ -115,7 +129,7 @@ int main(int, char**)
 	}
 
 	// Shader Program
-	unsigned int shaderProgram = glCreateProgram();
+	GLuint shaderProgram = glCreateProgram();
 	glAttachShader(shaderProgram, vertexShader);
 	glAttachShader(shaderProgram, fragmentShader);
 	glLinkProgram(shaderProgram);
@@ -134,7 +148,7 @@ int main(int, char**)
 		 0.0f,  0.5f, 0.0f  // top
 	};
 
-	unsigned int VBO, VAO;
+	GLuint VBO, VAO;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 
@@ -156,6 +170,8 @@ int main(int, char**)
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	io.Fonts->AddFontDefault();
+	io.FontGlobalScale = dpi_scale; // Scale font size based on DPI
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad; // Enable Gamepad Controls
 	ImGui::StyleColorsDark(); // Setup style
@@ -171,11 +187,9 @@ int main(int, char**)
 	bool show_another_window = false;
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-
-
-
 	// Main render loop
 	while (!glfwWindowShouldClose(window)) {
+		
 		// Input
 		processInput(window);
 		glfwPollEvents();
@@ -184,91 +198,51 @@ int main(int, char**)
 			continue;
 		} // Sleep if the window is minimized
 
-		// Start the Dear ImGui frame
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-
-		if (show_demo_window)
-			ImGui::ShowDemoWindow(&show_demo_window);
-
-		{
-			static float f = 0.0f;
-			static int counter = 0;
-			ImGui::Begin("Hello, world!"); // Create a window
-			ImGui::Text("This is some useful text."); // Display some text
-			ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-			ImGui::Checkbox("Another Window", &show_another_window);
-
-			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-			ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
-
-			if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
-
-			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
-			ImGui::End();
-		}
-
-		// 3. Show another simple window.
-		if (show_another_window)
-		{
-			ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-			ImGui::Text("Hello from another window!");
-			if (ImGui::Button("Close Me"))
-				show_another_window = false;
-			ImGui::End();
-		}
-
-		// Rendering
-		ImGui::Render();
-
-		// Start the Dear ImGui frame
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-
-		if (show_demo_window)
-			ImGui::ShowDemoWindow(&show_demo_window);
-
-		{
-			static float f = 0.0f;
-			static int counter = 0;
-			ImGui::Begin("Hello, world!"); // Create a window
-			ImGui::Text("This is some useful text."); // Display some text
-			ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-			ImGui::Checkbox("Another Window", &show_another_window);
-
-			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-			ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
-
-			if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
-
-			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
-			ImGui::End();
-		}
-
-		// 3. Show another simple window.
-		if (show_another_window)
-		{
-			ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-			ImGui::Text("Hello from another window!");
-			if (ImGui::Button("Close Me"))
-				show_another_window = false;
-			ImGui::End();
-		}
-
-		// Rendering
-		ImGui::Render();
-
-		// Render
+		// set viewport and clear color
 		glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w); // Dark cyan background
 		glClear(GL_COLOR_BUFFER_BIT);
+		int display_w, display_h;
+		glfwGetFramebufferSize(window, &display_w, &display_h);
+		glViewport(0, 0, display_w, display_h);
+
+
+		// Start the Dear ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		if (show_demo_window)
+			ImGui::ShowDemoWindow(&show_demo_window);
+
+		{
+			static float f = 0.0f;
+			static int counter = 0;
+			ImGui::Begin("Hello, world!"); // Create a window
+			ImGui::Text("This is some useful text."); // Display some text
+			ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
+			ImGui::Checkbox("Another Window", &show_another_window);
+
+			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
+			ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
+
+			if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
+				counter++;
+			ImGui::SameLine();
+			ImGui::Text("counter = %d", counter);
+
+			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
+			ImGui::End();
+		}
+
+		// 3. Show another simple window.
+		if (show_another_window)
+		{
+			ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+			ImGui::Text("Hello from another window!");
+			if (ImGui::Button("Close Me"))
+				show_another_window = false;
+			ImGui::End();
+		}
 
 		// Draw the triangle
 		glUseProgram(shaderProgram);
@@ -276,12 +250,14 @@ int main(int, char**)
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glBindVertexArray(0); // No need to unbind it every frame
 
-		int display_w, display_h;
-		glfwGetFramebufferSize(window, &display_w, &display_h);
-		glViewport(0, 0, display_w, display_h);
+
+		// Prepare Imgui Render
+		ImGui::Render();
+
+		// Render ImGui data over OpenGL content
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-		// GLFW: swap buffers and poll IO events
+		// GLFW: swap backbuffer
 		glfwSwapBuffers(window);
 	}
 
