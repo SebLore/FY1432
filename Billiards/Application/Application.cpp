@@ -3,6 +3,8 @@
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 
+#include <glm/ext/matrix_clip_space.hpp>
+
 #include "Window.h" // Needs full Window definition
 
 #include <imgui.h>
@@ -104,42 +106,12 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 		// 3. Initialize ImGui
 		InitImGui();
 
-		// 4. Initialize shaders and models TODO: move to a Scene class
-		m_ModelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
-		if (!m_ModelShader)
-			throw std::runtime_error("Failed to create Model Shader");
-		std::cout << "Model shader loaded successfully." << std::endl;
-
+		// 4. Initialize Shaders
+		InitializeShaders();
+	
 		// --- Temporary OpenGL Object Creation (Remove the old m_ShaderProgram, m_Vao, m_Vbo setup for the triangle) ---
-		// We will replace this with actual model loading next.
-		// For now, let's re-add the simple triangle to test the new shader class.
-		float vertices[] = {
-			// positions         // normals (dummy for now) // texCoords (dummy)
-			-0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.0f, 0.0f,
-			 0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  1.0f, 0.0f,
-			 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.5f, 1.0f
-		};
-		glGenVertexArrays(1, &m_ModelVAO);
-		glGenBuffers(1, &m_ModelVBO);
-		glBindVertexArray(m_ModelVAO);
-		glBindBuffer(GL_ARRAY_BUFFER, m_ModelVBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		// Position attribute
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-		glEnableVertexAttribArray(0);
-		// Normal attribute
-		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-		glEnableVertexAttribArray(1);
-		// TexCoord attribute
-		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-		glEnableVertexAttribArray(2);
-		glBindVertexArray(0);
-		m_ModelIndexCount = 3; // Not using EBO for this simple triangle array draw
-
+		InitializeModel();
 		// --- End of temporary OpenGL object creation ---
-
-
-
 
 		std::cout << "Subsystems initialized." << std::endl;
 	}
@@ -159,6 +131,8 @@ void Application::ShutdownSubsystems() {
 		ShutdownImGui();
 	}
 
+	m_ModelShader.reset();
+
 	 // --- Cleanup OpenGL Objects (Move to class destructors later)  ---
 	// glDeleteProgram(m_ShaderProgram); // Old one, remove
 	if (m_ModelVAO != 0) glDeleteVertexArrays(1, &m_ModelVAO);
@@ -173,6 +147,44 @@ void Application::ShutdownSubsystems() {
 bool Application::glfwInitState()
 {
 	return glfwGetPrimaryMonitor() != nullptr;
+}
+
+void Application::InitializeShaders()
+{
+	try {
+		m_ModelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
+		std::cout << "Model shader loaded successfully." << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Failed to load model shader: " << e.what() << std::endl;
+		// Handle error, perhaps rethrow or set a bad state
+	}
+}
+
+void Application::InitializeModel()
+{
+	float vertices[] = {
+		// positions         // normals (dummy for now) // texCoords (dummy)
+		-0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.0f, 0.0f,
+		 0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  1.0f, 0.0f,
+		 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.5f, 1.0f
+	};
+	glGenVertexArrays(1, &m_ModelVAO);
+	glGenBuffers(1, &m_ModelVBO);
+	glBindVertexArray(m_ModelVAO);
+	glBindBuffer(GL_ARRAY_BUFFER, m_ModelVBO);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	// Position attribute
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+	// Normal attribute
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
+	// TexCoord attribute
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+	glEnableVertexAttribArray(2);
+	glBindVertexArray(0);
+	m_ModelIndexCount = 3; // Not using EBO for this simple triangle array draw
 }
 
 void Application::InitImGui() {
@@ -235,6 +247,34 @@ void Application::Render() {
 	// --- Your OpenGL scene rendering would go here ---
 	// For now, we're just clearing the screen.
 	// The triangle/model drawing will be added back here later.
+
+
+	if(m_ModelShader && m_ModelVAO != 0) {
+		m_ModelShader->Use();
+
+		glm::mat4 projection = glm::perspective(glm::radians(m_camera->GetZoom()),
+			(float)m_window->GetWidth() / (float)m_window->GetHeight(),
+			0.1f, 100.0f);
+		glm::mat4 view = m_camera->GetViewMatrix();
+		m_ModelShader->SetMat4("projection", projection);
+		m_ModelShader->SetMat4("view", view);
+
+		glm::mat4 model = glm::mat4(1.0f);
+		// model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f)); // Optional: test rotation
+		m_ModelShader->SetMat4("model", model);
+
+		// Set lighting/material uniforms for the new shader
+		m_ModelShader->SetVec3("objectColor", 1.0f, 0.5f, 0.31f); // e.g., coral
+		m_ModelShader->SetVec3("lightColor", 1.0f, 1.0f, 1.0f);
+		m_ModelShader->SetVec3("lightPos_World", 1.2f, 1.0f, 2.0f);
+		m_ModelShader->SetVec3("viewPos_World", m_camera->GetPosition());
+
+		glBindVertexArray(m_ModelVAO);
+		// If using EBO: glDrawElements(GL_TRIANGLES, m_ModelIndexCount, GL_UNSIGNED_INT, 0);
+		glDrawArrays(GL_TRIANGLES, 0, 3); // For the simple triangle VBO
+		glBindVertexArray(0);
+	}
+
 
 	// --- Render ImGui UI ---
 	BeginImGuiFrame();

@@ -1,7 +1,7 @@
-#include "Application.h" // Your main application class
 #include <iostream>
 #include <stdexcept>
 
+#include "Application.h"
 
 int main(int argc, char** argv)
 {

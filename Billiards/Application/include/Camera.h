@@ -1,5 +1,8 @@
 ﻿#pragma once
-#include <glm/vec3.hpp>
+
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <glm/mat4x4.hpp>
 
 constexpr float c_YAW = -90.0f; // points towards negative Z
@@ -11,7 +14,7 @@ constexpr float c_ZOOM = 45.0f; // FOV
 class Camera
 {
 public:
-    Camera();
+    Camera(float width, float height);
     ~Camera();
     
     Camera(const Camera& camera);
@@ -26,6 +29,9 @@ public:
     glm::vec3 GetUp()const;
     glm::vec3 GetRight()const;
     glm::vec3 GetForward()const;
+	float GetYaw()const;
+	float GetPitch()const;
+	float GetZoom()const;
 
     void SetPosition(glm::vec3 position);
     void SetUp(glm::vec3 up);
@@ -37,6 +43,13 @@ public:
     void Rotate(float yaw, float pitch);
     void Zoom(float zoom);
 
+	void MoveForward(float distance);
+	void MoveRight(float distance);
+	void MoveUp(float distance);
+
+	void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
+	void ProcessMouseScroll(float yoffset);
+	void UpdateCameraVectors();
 private:
     glm::vec3 m_position = glm::vec3(0, 0, 0);
     glm::vec3 m_front = glm::vec3(0.0f, 0.0f, -1.0f);
@@ -45,4 +58,9 @@ private:
     glm::vec3 m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     float m_yaw = -90.0f;
     float m_pitch = 0.0f;
+	float m_speed = 2.5f;
+	float m_zoom = 45.0f; // FOV Y
+
+	glm::mat4x4 m_viewMatrix = glm::mat4(1.0f);
+	glm::mat4x4 m_projMatrix = glm::mat4(1.0f);
 };

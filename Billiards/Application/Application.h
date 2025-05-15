@@ -1,10 +1,11 @@
 #pragma once
 
 #include <memory> // for std::unique_ptr
-#include <imgui/imgui.h>
+#include <imgui.h>
 
 #include "Window.h"
 #include "Shader.h"
+#include "Camera.h"
 
 class Application
 {
@@ -24,6 +25,9 @@ private:
     void InitializeSubsystems(int windowWidth, int windowHeight, const char * windowName);
     void ShutdownSubsystems();
     bool glfwInitState();
+
+    void InitializeShaders();
+    void InitializeModel();
 
     void ProcessInput(float deltaTime);
     void Update(float deltaTime);
@@ -47,6 +51,8 @@ private:
     // static callback function for when window size changes and dpi needs to be adjusted
     static void WindowContentScaleCallback(GLFWwindow* window, float xscale, float yscale);
 
+
+	std::unique_ptr<Camera> m_camera; // Camera object
 
     // shader data (move to dedicated classes later)
     std::unique_ptr<Shader> m_ModelShader; // New shader object
