@@ -7,16 +7,19 @@
 #include <iostream>
 
 void Window::GlfwErrorCallback(int error, const char* description) {
-	std::cerr << "GLFW Error (" << error << "): " << description << std::endl;
+	std::cerr << "GLFW Error (" << error << "): " << description << "\n";
 }
 
 void Window::FramebufferSizeCallback(GLFWwindow* glfwWindow, int width, int height) {
-	Window* windowInstance = static_cast<Window*>(glfwGetWindowUserPointer(glfwWindow));
-	if (windowInstance) {
-		windowInstance->m_width = width;
-		windowInstance->m_height = height;
+	if (auto * window = static_cast<Window*>(glfwGetWindowUserPointer(glfwWindow)))
+	{
+		window->m_width = width;
+		window->m_height = height;
 		glViewport(0, 0, width, height);
-		// You could add a user-defined resize callback here if needed
+	}
+	else
+	{
+		std::cerr << "Callback was called but window instance was nullptr.\n";
 	}
 }
 

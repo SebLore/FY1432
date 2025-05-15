@@ -14,8 +14,9 @@ constexpr float c_ZOOM = 45.0f; // FOV
 class Camera
 {
 public:
-    Camera(float width, float height);
-    ~Camera();
+	Camera();
+    Camera(float width, float height, float nearZ, float farZ);
+    ~Camera() = default;
     
     Camera(const Camera& camera);
     Camera& operator=(const Camera& camera);
@@ -33,10 +34,12 @@ public:
 	float GetPitch()const;
 	float GetZoom()const;
 
-    void SetPosition(glm::vec3 position);
-    void SetUp(glm::vec3 up);
-    void SetRight(glm::vec3 right);
-    void SetForward(glm::vec3 forward);
+    void SetPosition(const glm::vec3 &position);
+    void SetUp(const glm::vec3 &up);
+    void SetRight(const glm::vec3 &right);
+    void SetForward(const glm::vec3 &forward);
+	void SetAspectRatio(float aspect);
+	void SetZoomFov(float zoom);
 
     void Translate(glm::vec3 translation);
     void Rotate(glm::vec3 rotation);
@@ -47,19 +50,23 @@ public:
 	void MoveRight(float distance);
 	void MoveUp(float distance);
 
-	void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
-	void ProcessMouseScroll(float yoffset);
+	// TODO: implement these functions
+	// void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
+	// void ProcessMouseScroll(float yoffset);
 	void UpdateCameraVectors();
 private:
     glm::vec3 m_position = glm::vec3(0, 0, 0);
     glm::vec3 m_front = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-    glm::vec3 m_right = glm::vec3(0, 0, 1);
     glm::vec3 m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+    glm::vec3 m_right = glm::vec3(0, 0, 1);
     float m_yaw = -90.0f;
     float m_pitch = 0.0f;
 	float m_speed = 2.5f;
 	float m_zoom = 45.0f; // FOV Y
+	float m_aspect = 1.0f;
+	float m_nearZ = 0.1f;
+	float m_farZ = 100.0f;
 
 	glm::mat4x4 m_viewMatrix = glm::mat4(1.0f);
 	glm::mat4x4 m_projMatrix = glm::mat4(1.0f);
