@@ -6,6 +6,7 @@
 #include "Window.h"
 #include "Shader.h"
 #include "Camera.h"
+#include "ModelLoader.h"
 
 class Application
 {
@@ -27,7 +28,7 @@ private:
     bool glfwInitState();
 
     void InitializeShaders();
-    void InitializeModel();
+    void InitResources(int width, int height);
 
     void ProcessInput(float deltaTime);
     void Update(float deltaTime);
@@ -38,28 +39,21 @@ private:
     void BeginImGuiFrame();
     void RenderImGui();
 
+    // --- member variables -----------------------------------------------------------------------
     std::unique_ptr<Window> m_window;
-
-	float m_dpiScale = 1.0f; // DPI scale for high-DPI displays
-
-    // ImGui related state
+    bool m_isRunning = false;
+    
+    // for imgui
     bool m_showDemoWindow = true;
 	ImVec4 m_clearColor = ImVec4(0.45f, 0.55f, 0.60f, 1.00f); // Clear color
 
-    bool m_isRunning = false;
 
     // static callback function for when window size changes and dpi needs to be adjusted
+	float m_dpiScale = 1.0f; // DPI scale for high-DPI displays
     static void WindowContentScaleCallback(GLFWwindow* window, float xscale, float yscale);
 
 
-	std::unique_ptr<Camera> m_camera; // Camera object
-
-    // shader data (move to dedicated classes later)
-    std::unique_ptr<Shader> m_ModelShader; // New shader object
-
-    // For basic model data (will move to Model/Mesh classes later)
-    unsigned int m_ModelVAO = 0;
-    unsigned int m_ModelVBO = 0;
-    unsigned int m_ModelEBO = 0;
-    unsigned int m_ModelIndexCount = 0;
+	std::unique_ptr<Camera> m_camera; // Camera object TODO: move into some kind of scene class
+	std::unique_ptr<Shader> m_modelShader; // New shader object TODO: move to dedicated shader manager
+	std::unique_ptr<Model> m_model; // Model object TODO: move to some kind of scene class
 };

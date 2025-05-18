@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include <string>
+
 #include <glad/gl.h>
 #include <glm/vec2.hpp>
 #include <glm/vec3.hpp>
@@ -9,6 +11,13 @@ struct Vertex
     glm::vec3 position;
     glm::vec2 texCoord;
     glm::vec3 normal;
+};
+
+struct Texture
+{
+	GLuint id;
+	std::string type;
+	std::string path;
 };
 
 class Mesh
@@ -46,4 +55,9 @@ private:
     GLuint m_EBO = 0; // EBO index buffer 
     GLsizei m_vertexCount = 0;
     GLsizei m_indexCount = 0;
+
+	std::vector<Vertex> m_vertices;
+	std::vector<GLuint> m_indices;
+	std::vector<Texture> m_textures;
+
 };

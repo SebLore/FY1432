@@ -23,4 +23,5 @@ private:
     static void ProcessNode(aiNode* node, const aiScene* scene, std::vector<Mesh>& outMeshes,
                             const std::string& directory);
     static Mesh ProcessMesh(aiMesh* mesh, const aiScene* scene, const std::string &directory);
+	static unsigned int TextureFromFile(const char* path, const std::string& directory);
 };

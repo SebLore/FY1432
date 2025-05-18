@@ -54,7 +54,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(SolutionDir)external\assimp\build\include;$(SolutionDir)external\assimp\include;$(SolutionDir)external\glad\include;$(SolutionDir)external\GLFW\include;$(SolutionDir)external\glm;$(SolutionDir)external\imgui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)external\stb;$(SolutionDir)external\assimp\build\include;$(SolutionDir)external\assimp\include;$(SolutionDir)external\glad\include;$(SolutionDir)external\GLFW\include;$(SolutionDir)external\glm;$(SolutionDir)external\imgui;$(ProjectDir)include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
