@@ -1,4 +1,4 @@
-#line 1 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 1 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 
 
 
@@ -27,7 +27,7 @@
 #pragma once
 
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
@@ -58,34 +58,34 @@
 
 
 
-#line 32 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 32 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
-#line 34 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 35 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-    
-#line 39 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-
+#line 34 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 35 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
+#line 39 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+    
     
 
-#line 49 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 49 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
             
         
 
-#line 54 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-    #line 55 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 56 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 54 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+    #line 55 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 56 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -235,11 +235,11 @@
 
 
 
-#line 151 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 151 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
-#line 155 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 155 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -269,29 +269,29 @@
 
 
 
-#line 185 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 185 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
-#line 188 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 188 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
-#line 190 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 190 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
 
 
-#line 196 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 196 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
-#line 200 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 200 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
 
 
 
-#line 207 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 207 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -303,7 +303,7 @@
 
 
 
-#line 219 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 219 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -312,8 +312,8 @@
 
 
 
-#line 228 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-#line 229 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 228 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
+#line 229 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1639,7 +1639,7 @@
 
 
 
-#line 1555 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1555 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1670,7 +1670,7 @@
 
 
 
-#line 1586 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1586 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1695,7 +1695,7 @@
 
 
 
-#line 1611 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1611 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1708,7 +1708,7 @@
 
 
 
-#line 1624 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1624 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1747,7 +1747,7 @@
 
 
 
-#line 1663 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1663 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1859,7 +1859,7 @@
 
 
 
-#line 1775 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1775 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -1962,7 +1962,7 @@
 
 
 
-#line 1878 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 1878 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2131,7 +2131,7 @@
 
 
 
-#line 2047 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2047 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2233,7 +2233,7 @@
 
 
 
-#line 2149 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2149 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2450,8 +2450,8 @@
 
 
 
-#line 2366 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-#line 2367 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2366 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
+#line 2367 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2679,7 +2679,7 @@
 
 
 
-#line 2595 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2595 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
     
     
     
@@ -2718,7 +2718,7 @@
     
     
 
-#line 2634 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2634 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2952,7 +2952,7 @@
 
 
 
-#line 2868 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2868 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2962,7 +2962,7 @@
 
 
 
-#line 2878 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2878 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -2970,36 +2970,24 @@
     
 
 
-#line 2886 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-#line 2887 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2886 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
+#line 2887 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
 
 
 
-#line 2894 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-#line 2895 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2894 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
+#line 2895 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
 
 
 
-#line 2902 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-#line 2903 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
-
-
-
-
-
-
-
-
-
-
-
-#line 2915 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2902 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
+#line 2903 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -3007,6 +2995,11 @@
 
 
 
+
+
+
+
+#line 2915 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -3033,7 +3026,14 @@
 
 
 
-#line 2949 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+
+
+
+
+
+
+
+#line 2949 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 
 
 
@@ -3060,7 +3060,7 @@
 
 
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\concurrencysal.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\concurrencysal.h"
 
 
 
@@ -3351,11 +3351,11 @@
 
 
 
-#line 292 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\concurrencysal.h"
+#line 292 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\concurrencysal.h"
 
 
 
-#line 296 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\concurrencysal.h"
+#line 296 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\concurrencysal.h"
 
 
 
@@ -3448,19 +3448,19 @@
 
 
 
-#line 389 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\concurrencysal.h"
+#line 389 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\concurrencysal.h"
 
 
 
 
 
-#line 395 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\concurrencysal.h"
+#line 395 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\concurrencysal.h"
 #pragma external_header(pop)
-#line 2975 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\sal.h"
+#line 2975 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\sal.h"
 #pragma external_header(pop)
-#line 58 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 58 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3483,8 +3483,8 @@
 
 
         
-    #line 24 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-#line 25 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+    #line 24 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+#line 25 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3493,19 +3493,19 @@
 
 
         
-    #line 34 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-#line 35 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+    #line 34 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+#line 35 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
     
-#line 40 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 40 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
 
     
-#line 46 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 46 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 #pragma warning(push)
 #pragma warning(disable:   4514 4820 )
@@ -3516,7 +3516,7 @@
 
 
 
-#line 57 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 57 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
     
@@ -3524,8 +3524,8 @@
         typedef unsigned __int64  uintptr_t;
     
 
-#line 65 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-#line 66 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 65 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+#line 66 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
     
@@ -3533,27 +3533,27 @@
 
 
         typedef char* va_list;
-    #line 74 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-#line 75 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+    #line 74 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+#line 75 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
 
     
-#line 81 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 81 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
 
 
-#line 87 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 87 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
-#line 91 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 91 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
     
     
-#line 94 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 94 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3565,7 +3565,7 @@
 
 
 
-#line 106 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 106 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3573,25 +3573,7 @@
 
 
 
-#line 114 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-
-
-
-
-
-
-
-
-
-
-
-#line 126 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
-
-
-
-
-
-#line 132 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 114 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3602,7 +3584,14 @@
 
 
 
-#line 143 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+
+#line 126 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+
+
+
+
+
+#line 132 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3613,7 +3602,18 @@
 
 
 
-#line 154 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 143 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
+
+
+
+
+
+
+
+
+
+
+#line 154 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
     void __cdecl __va_start(va_list* , ...);
 
@@ -3624,7 +3624,7 @@
 
     
 
-#line 165 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 165 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 
 
@@ -3661,16 +3661,16 @@
 
 
 
-#line 202 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 202 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
     
 
-#line 206 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vadefs.h"
+#line 206 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vadefs.h"
 
 #pragma warning(pop) 
 #pragma pack(pop)
 #pragma external_header(pop)
-#line 59 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 59 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 #pragma warning(push)
 #pragma warning(disable:   4514 4820 )
@@ -3688,7 +3688,7 @@
 
 
 
-#line 77 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 77 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
@@ -3698,15 +3698,15 @@
 
 
 
-#line 87 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-    
-
+#line 87 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
     
 
 
-#line 95 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    
+
+
+#line 95 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 __pragma(pack(push, 8))
 
@@ -3717,8 +3717,8 @@ __pragma(pack(push, 8))
 
 
         
-    #line 106 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 107 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 106 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 107 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
@@ -3737,54 +3737,54 @@ __pragma(pack(push, 8))
 
     
 
-#line 126 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 126 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
-#line 128 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 128 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    #line 130 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 131 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 130 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 131 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
-#line 136 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 136 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    #line 138 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 139 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 138 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 139 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
 
 
-#line 145 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 145 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
     
     
-#line 148 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-
-    
-#line 154 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-
-
-
-
-
-
-
-#line 165 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-    
-#line 167 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 148 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
 
     
-#line 173 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 154 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+
+
+
+
+#line 165 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+    
+#line 167 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+    
+#line 173 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
@@ -3792,8 +3792,8 @@ __pragma(pack(push, 8))
 
 
       
-    #line 181 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 182 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 181 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 182 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
@@ -3807,70 +3807,56 @@ __pragma(pack(push, 8))
 
 
 
-#line 196 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 196 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
-#line 200 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 200 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
-#line 204 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 204 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
     typedef _Bool __vcrt_bool;
-#line 206 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 206 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
     
-#line 211 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 211 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
-#line 215 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 215 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
-#line 219 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 219 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
     
     typedef unsigned short wchar_t;
-#line 225 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 225 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
 
         
-    #line 232 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 233 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 232 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 233 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
 
-#line 239 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 239 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
-#line 243 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 243 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
-
-
-
-
-
-
-
-
-    
-#line 255 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-#line 259 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
 
 
 
@@ -3880,105 +3866,68 @@ __pragma(pack(push, 8))
 
 
     
-#line 269 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 255 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+#line 259 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+
+
+    
+#line 269 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
-#line 274 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 274 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    #line 276 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 277 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 276 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 277 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
-#line 282 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 282 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    #line 284 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 285 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 284 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 285 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
 
-#line 290 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 290 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    #line 292 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 293 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-
-
-#line 299 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-#line 303 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
+    #line 292 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 293 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     
+
+#line 298 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         
-    
-
-
-
-#line 313 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 314 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-#line 318 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-    
-#line 320 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 300 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 301 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
 
 
+#line 307 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
-
-    
-
-
-        
-    #line 334 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 335 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 311 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
 
+#line 315 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
-
-
-
-    
-#line 344 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-
-
-
-#line 351 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-    
-
-
-        
-
-
-
-
-    #line 362 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 363 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-
-
-
-#line 367 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
 
 
     
@@ -3986,8 +3935,71 @@ __pragma(pack(push, 8))
     
 
 
-#line 375 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 376 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+
+#line 325 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 326 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+#line 330 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+    
+#line 332 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+
+
+
+    
+
+
+        
+    #line 346 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 347 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+
+    
+#line 356 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+
+
+
+#line 363 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+    
+
+
+        
+
+
+
+
+    #line 374 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 375 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+
+#line 379 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+
+
+    
+        
+    
+
+
+#line 387 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 388 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
     void __cdecl __security_init_cookie(void);
@@ -3995,14 +4007,14 @@ __pragma(pack(push, 8))
     
 
 
-#line 384 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 396 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 
-#line 387 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 399 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
         void __cdecl __security_check_cookie(  uintptr_t _StackCookie);
         __declspec(noreturn) void __cdecl __report_gsfailure(  uintptr_t _StackCookie);
-    #line 390 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
-#line 391 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+    #line 402 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
+#line 403 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 extern uintptr_t __security_cookie;
 
@@ -4010,13 +4022,13 @@ extern uintptr_t __security_cookie;
     
     
     
-#line 399 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 411 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 
 __pragma(pack(pop))
 
 #pragma warning(pop) 
 
-#line 405 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime.h"
+#line 417 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime.h"
 #pragma external_header(pop)
 #line 11 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\corecrt.h"
 
@@ -10733,7 +10745,7 @@ __pragma(pack(pop))
 #pragma warning(pop) 
 #line 2449 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h"
 #pragma external_header(pop)
-#line 5 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 5 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 #pragma external_header(push)
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdlib.h"
 
@@ -11710,7 +11722,7 @@ __pragma(pack(pop))
 #pragma external_header(pop)
 #line 16 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdlib.h"
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\limits.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\limits.h"
 
 
 
@@ -11739,7 +11751,7 @@ __pragma(pack(push, 8))
 
 
 
-#line 30 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\limits.h"
+#line 30 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\limits.h"
 
 
 
@@ -11777,12 +11789,12 @@ __pragma(pack(push, 8))
         
     
 
-#line 68 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\limits.h"
-#line 69 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\limits.h"
+#line 68 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\limits.h"
+#line 69 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\limits.h"
 
 
     
-#line 73 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\limits.h"
+#line 73 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\limits.h"
 
 __pragma(pack(pop))
 
@@ -13027,7 +13039,7 @@ __pragma(pack(pop))
 #pragma warning(pop) 
 #line 1363 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdlib.h"
 #pragma external_header(pop)
-#line 6 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 6 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 #pragma external_header(push)
 #line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\string.h"
 
@@ -13211,7 +13223,7 @@ __pragma(pack(pop))
 #pragma external_header(pop)
 #line 12 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\corecrt_memcpy_s.h"
 #pragma external_header(push)
-#line 1 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime_string.h"
+#line 1 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime_string.h"
 
 
 
@@ -13249,7 +13261,7 @@ int __cdecl memcmp(
 
  
 
-#line 43 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime_string.h"
+#line 43 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime_string.h"
 void* __cdecl memcpy(
       void* _Dst,
             void const* _Src,
@@ -13265,7 +13277,7 @@ void* __cdecl memcpy(
 
  
 
-#line 63 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime_string.h"
+#line 63 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime_string.h"
 void* __cdecl memset(
       void*  _Dst,
                                int    _Val,
@@ -13314,7 +13326,7 @@ void* __cdecl memset(
 
 __pragma(pack(pop))
 
-#line 112 "E:\\Program Files\\Visual Studio\\VC\\Tools\\MSVC\\14.42.34433\\include\\vcruntime_string.h"
+#line 112 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include\\vcruntime_string.h"
 
 #pragma warning(pop) 
 #pragma external_header(pop)
@@ -14573,8 +14585,8 @@ __pragma(pack(pop))
 #line 592 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\string.h"
 #line 593 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\string.h"
 #pragma external_header(pop)
-#line 7 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
-#line 1 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 7 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 1 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
@@ -14645,35 +14657,35 @@ __pragma(pack(pop))
     
   
 
-#line 72 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 73 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 72 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 73 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
   
 
 
     
-  #line 80 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 81 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 80 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 81 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
   
 
 
     
-  #line 88 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 89 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 88 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 89 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
   
     
       
         
-      #line 96 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+      #line 96 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
     
 
-#line 99 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-  #line 100 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 99 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 100 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
   
     #pragma external_header(push)
@@ -15019,22 +15031,22 @@ __pragma(pack(pop))
 
 #line 252 "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\shared\\winapifamily.h"
 #pragma external_header(pop)
-#line 103 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 103 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
     
 
-#line 106 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-  #line 107 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 106 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 107 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
   
     
-  #line 111 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 112 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 111 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 112 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
 
   
-#line 118 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 118 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
@@ -15059,10 +15071,10 @@ __pragma(pack(pop))
 
 
 
-#line 143 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 143 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
     
-  #line 145 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 146 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+  #line 145 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 146 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
@@ -15070,15 +15082,15 @@ __pragma(pack(pop))
   
 
 
-#line 154 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 154 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
-#line 158 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 158 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
-#line 162 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 162 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
@@ -15094,7 +15106,7 @@ typedef GLADapiproc (*GLADuserptrloadfunc)(void *userptr, const char *name);
 typedef void (*GLADprecallback)(const char *name, GLADapiproc apiproc, int len_args, ...);
 typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apiproc, int len_args, ...);
 
-#line 178 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 178 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
 
@@ -16465,7 +16477,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 1 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 1 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16560,7 +16572,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 96 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 96 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16571,7 +16583,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 107 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 107 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16579,7 +16591,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 115 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 115 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16592,7 +16604,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 128 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 128 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16601,18 +16613,9 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 137 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 137 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
-#line 139 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
-
-
-
-
-
-
-
-
-
+#line 139 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16636,7 +16639,16 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 172 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+
+
+
+
+
+
+
+
+
+#line 172 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16649,7 +16661,7 @@ typedef void (*GLADpostcallback)(void *ret, const char *name, GLADapiproc apipro
 
 
 
-#line 185 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 185 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16701,7 +16713,7 @@ typedef unsigned __int64        khronos_uint64_t;
 
 
 
-#line 237 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 237 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16726,7 +16738,7 @@ typedef unsigned long long int khronos_uintptr_t;
 
 
 
-#line 262 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 262 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 typedef signed   long long int khronos_ssize_t;
@@ -16734,14 +16746,14 @@ typedef unsigned long long int khronos_usize_t;
 
 
 
-#line 270 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 270 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
 
 
 typedef          float         khronos_float_t;
-#line 277 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 277 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16755,14 +16767,14 @@ typedef          float         khronos_float_t;
 
 typedef khronos_uint64_t       khronos_utime_nanoseconds_t;
 typedef khronos_int64_t        khronos_stime_nanoseconds_t;
-#line 291 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 291 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
 
 
 
-#line 298 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 298 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
 
 
 
@@ -16776,8 +16788,8 @@ typedef enum {
     KHRONOS_BOOLEAN_ENUM_FORCE_SIZE = 0x7FFFFFFF
 } khronos_boolean_enum_t;
 
-#line 312 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
-#line 1549 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 312 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\KHR\\khrplatform.h"
+#line 1549 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef unsigned int GLenum;
 typedef unsigned char GLboolean;
 typedef unsigned int GLbitfield;
@@ -16802,30 +16814,30 @@ typedef char GLcharARB;
 
 
 typedef unsigned int GLhandleARB;
-#line 1574 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1574 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_uint16_t GLhalf;
 typedef khronos_uint16_t GLhalfARB;
 typedef khronos_int32_t GLfixed;
 
 
-#line 1580 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1580 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_intptr_t GLintptr;
-#line 1582 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1582 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
-#line 1585 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1585 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_intptr_t GLintptrARB;
-#line 1587 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1587 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
-#line 1590 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1590 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_ssize_t GLsizeiptr;
-#line 1592 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1592 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 
 
-#line 1595 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1595 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_ssize_t GLsizeiptrARB;
-#line 1597 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 1597 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
 typedef khronos_int64_t GLint64;
 typedef khronos_int64_t GLint64EXT;
 typedef khronos_uint64_t GLuint64;
@@ -19529,8 +19541,8 @@ extern int gladLoadGL( GLADloadfunc load);
 
 
 
-#line 4301 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
-#line 8 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 4301 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\include\\glad\\gl.h"
+#line 8 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 
 
 
@@ -19539,9 +19551,9 @@ extern int gladLoadGL( GLADloadfunc load);
 
 
 
-#line 17 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 17 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 
-#line 19 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 19 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
 
 
 
@@ -25671,7 +25683,7 @@ static int glad_gl_get_extensions( const char **out_exts, char ***out_exts_i) {
     }
 
 
-#line 6149 "E:\\Code\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
+#line 6149 "C:\\Users\\46730\\source\\repos\\School\\FY1432\\Billiards\\external\\glad\\src\\gl.c"
     if (glad_glGetString == ((void *)0)) {
         return 0;
     }
