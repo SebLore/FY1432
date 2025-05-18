@@ -25,6 +25,7 @@ public:
     void SetPosition(float x, float y, float z);
     void SetPosition(glm::vec3 position);
 
+    const glm::mat4x4& GetTransform()const;
     // no copying
     Model(const Model&) = delete;
     Model& operator=(const Model&) = delete;

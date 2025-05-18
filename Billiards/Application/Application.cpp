@@ -22,7 +22,7 @@ void Application::WindowContentScaleCallback(GLFWwindow* window, float xscale, f
 	// This callback is optional and can be used to adjust the DPI scale dynamically
 	Application* app = static_cast<Application*>(glfwGetWindowUserPointer(window));
 	// Check if the application instance is valid
-	if (app) 
+	if (app)
 	{
 		app->m_dpiScale = (xscale + yscale) * 0.5f; // Average scale
 
@@ -46,7 +46,7 @@ Application::Application(int windowWidth, int windowHeight, const char* windowTi
 	}
 }
 
-Application::~Application() 
+Application::~Application()
 {
 	std::cout << "Shutting down application." << std::endl;
 	ShutdownSubsystems();
@@ -108,10 +108,9 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 
 		// 4. Initialize Shaders
 		InitializeShaders();
-	
-		// --- Temporary OpenGL Object Creation (Remove the old m_ShaderProgram, m_Vao, m_Vbo setup for the triangle) ---
-		InitializeModel();
-		// --- End of temporary OpenGL object creation ---
+
+		// 5. Initialize resources
+		InitResources();
 
 		std::cout << "Subsystems initialized." << std::endl;
 	}
@@ -131,14 +130,7 @@ void Application::ShutdownSubsystems() {
 		ShutdownImGui();
 	}
 
-	m_ModelShader.reset();
-
-	 // --- Cleanup OpenGL Objects (Move to class destructors later)  ---
-	// glDeleteProgram(m_ShaderProgram); // Old one, remove
-	if (m_ModelVAO != 0) glDeleteVertexArrays(1, &m_ModelVAO);
-	if (m_ModelVBO != 0) glDeleteBuffers(1, &m_ModelVBO);
-	if (m_ModelEBO != 0) glDeleteBuffers(1, &m_ModelEBO); // If you add EBO
-	// --- End of OpenGL object cleanup ---
+	m_modelShader.reset();
 
 	// m_window will destruct itself and terminate GLFW
 
@@ -152,7 +144,7 @@ bool Application::glfwInitState()
 void Application::InitializeShaders()
 {
 	try {
-		m_ModelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
+		m_modelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
 		std::cout << "Model shader loaded successfully." << std::endl;
 	}
 	catch (const std::exception& e) {
@@ -161,31 +153,23 @@ void Application::InitializeShaders()
 	}
 }
 
-void Application::InitializeModel()
+void Application::InitResources(int width, int height)
 {
-	float vertices[] = {
-		// positions         // normals (dummy for now) // texCoords (dummy)
-		-0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.0f, 0.0f,
-		 0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  1.0f, 0.0f,
-		 0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f,  0.5f, 1.0f
-	};
-	glGenVertexArrays(1, &m_ModelVAO);
-	glGenBuffers(1, &m_ModelVBO);
-	glBindVertexArray(m_ModelVAO);
-	glBindBuffer(GL_ARRAY_BUFFER, m_ModelVBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	// Position attribute
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	// Normal attribute
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-	glEnableVertexAttribArray(1);
-	// TexCoord attribute
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-	glEnableVertexAttribArray(2);
-	glBindVertexArray(0);
-	m_ModelIndexCount = 3; // Not using EBO for this simple triangle array draw
+	try
+	{
+		m_camera = std::make_unique<Camera>(width, height, 0.1f, 100.0f);
+		m_model = ModelLoader::LoadModel("assets/geometry/teapot.obj");
+		if (!m_model)
+		{
+			throw std::runtime_error("Failed to load model.");
+		}
+		std::cout << "Model loaded successfully." << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Failed to load model: " << e.what() << std::endl;
+	}
 }
+
 
 void Application::InitImGui() {
 	IMGUI_CHECKVERSION();
@@ -221,6 +205,17 @@ void Application::BeginImGuiFrame() {
 }
 
 void Application::RenderImGui() {
+	// --- Render ImGui UI ---
+	BeginImGuiFrame();
+
+	if (m_showDemoWindow) {
+		ImGui::ShowDemoWindow(&m_showDemoWindow);
+	}
+	ImGui::Begin("My Application Controls");
+	ImGui::Text("Hello from Application class!");
+	ImGui::Checkbox("Show ImGui Demo Window", &m_showDemoWindow);
+	ImGui::End();
+
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
@@ -234,61 +229,33 @@ void Application::ProcessInput(float deltaTime) {
 	if (glfwGetKey(m_window->GetNativeHandle(), GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(m_window->GetNativeHandle(), true);
 	}
-	// Add other input processing here (e.g., for camera, player, etc.)
+
+	// TODO: implement camera controls
 }
 
-void Application::Update(float deltaTime) {
-	// Update simulation logic, physics, etc.
+void Application::Update(float deltaTime)
+{
+	// TODO: add model update loop
 }
 
 void Application::Render() {
+
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Add GL_DEPTH_BUFFER_BIT if doing 3D
 
-	// --- Your OpenGL scene rendering would go here ---
-	// For now, we're just clearing the screen.
-	// The triangle/model drawing will be added back here later.
+	// --- Render the model ---
+	m_modelShader->Use();
+	glm::mat4 view = m_camera->GetViewMatrix();
+	glm::mat4 projection = m_camera->GetProjectionMatrix();
+	glm::mat4 model = glm::mat4(1.0f); // Identity matrix
+	glm::mat4 mvp = projection * view * model; // Model-View-Projection matrix
+	m_modelShader->SetMat4("u_MVP", mvp);
+	m_modelShader->SetVec3("u_viewPos", m_camera->GetPosition());
 
+	m_model->Draw(); // Draw the model
+	// -----------------------
 
-	if(m_ModelShader && m_ModelVAO != 0) {
-		m_ModelShader->Use();
-
-		glm::mat4 projection = glm::perspective(glm::radians(m_camera->GetZoom()),
-			(float)m_window->GetWidth() / (float)m_window->GetHeight(),
-			0.1f, 100.0f);
-		glm::mat4 view = m_camera->GetViewMatrix();
-		m_ModelShader->SetMat4("projection", projection);
-		m_ModelShader->SetMat4("view", view);
-
-		glm::mat4 model = glm::mat4(1.0f);
-		// model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f)); // Optional: test rotation
-		m_ModelShader->SetMat4("model", model);
-
-		// Set lighting/material uniforms for the new shader
-		m_ModelShader->SetVec3("objectColor", 1.0f, 0.5f, 0.31f); // e.g., coral
-		m_ModelShader->SetVec3("lightColor", 1.0f, 1.0f, 1.0f);
-		m_ModelShader->SetVec3("lightPos_World", 1.2f, 1.0f, 2.0f);
-		m_ModelShader->SetVec3("viewPos_World", m_camera->GetPosition());
-
-		glBindVertexArray(m_ModelVAO);
-		// If using EBO: glDrawElements(GL_TRIANGLES, m_ModelIndexCount, GL_UNSIGNED_INT, 0);
-		glDrawArrays(GL_TRIANGLES, 0, 3); // For the simple triangle VBO
-		glBindVertexArray(0);
-	}
-
-
-	// --- Render ImGui UI ---
-	BeginImGuiFrame();
-
-	if (m_showDemoWindow) {
-		ImGui::ShowDemoWindow(&m_showDemoWindow);
-	}
-	ImGui::Begin("My Application Controls");
-	ImGui::Text("Hello from Application class!");
-	ImGui::Checkbox("Show ImGui Demo Window", &m_showDemoWindow);
-	ImGui::End();
-
-	RenderImGui(); // This handles ImGui::Render() and drawing the data
+	RenderImGui(); // this handles ImGui::Render() and drawing the data, also ends the ImGui frame
 }
 
 void Application::Run() {
@@ -300,9 +267,9 @@ void Application::Run() {
 
 	auto lastTime = std::chrono::high_resolution_clock::now();
 
-	
+
 	// main window loop
-	while (m_isRunning && !m_window->ShouldClose()) 
+	while (m_isRunning && !m_window->ShouldClose())
 	{
 		auto currentTime = std::chrono::high_resolution_clock::now();
 		float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - lastTime).count();
@@ -312,10 +279,9 @@ void Application::Run() {
 
 		// application bits
 		{
-			std::cout << "Pretending to render...\n";
-			//ProcessInput(deltaTime);
-			//Update(deltaTime);
-			//Render();
+			ProcessInput(deltaTime);
+			Update(deltaTime);
+			Render();
 		}
 
 		m_window->SwapBuffers();
