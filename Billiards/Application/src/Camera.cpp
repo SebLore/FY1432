@@ -4,7 +4,7 @@ Camera::Camera()
 {
     // initialize Camera with default values: up y+, right x+, forward z-
     m_position = glm::vec3(0.0f, 0.0f, 0.0f);
-    m_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    m_forward = glm::vec3(0.0f, 0.0f, -1.0f);
     m_up = glm::vec3(0.0f, 1.0f, 0.0f);
     m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     m_right = glm::vec3(1.0f, 0.0f, 0.0f);
@@ -20,7 +20,7 @@ Camera::Camera()
     m_farZ = 100.0f;
 
     // generate matrices
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
     m_projMatrix = glm::perspective(glm::radians(m_zoom), m_aspect, m_nearZ, m_farZ);
 }
 
@@ -28,10 +28,10 @@ Camera::Camera(float width, float height, float nearZ, float farZ)
 {
     // initialize Camera with default values: up y+, right x+, forward z-
     m_position = glm::vec3(0.0f, 0.0f, 0.0f);
-    m_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    m_forward = glm::vec3(0.0f, 0.0f, -1.0f);
     m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-    m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     m_right = glm::vec3(1.0f, 0.0f, 0.0f);
+    m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
 
     // initialize camera angles to default values
     m_yaw = c_YAW;
@@ -43,17 +43,17 @@ Camera::Camera(float width, float height, float nearZ, float farZ)
     m_farZ = farZ;
 
     // create the view matrix
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
     m_projMatrix = glm::perspective(glm::radians(m_zoom), m_aspect, m_nearZ, m_farZ);
 }
 
 Camera::Camera(const Camera& camera)
 {
     m_position = camera.m_position;
-    m_front = camera.m_front;
+    m_forward = camera.m_forward;
     m_up = camera.m_up;
-    m_world_up = camera.m_world_up;
     m_right = camera.m_right;
+    m_world_up = camera.m_world_up;
     m_yaw = camera.m_yaw;
     m_pitch = camera.m_pitch;
     m_zoom = camera.m_zoom;
@@ -71,10 +71,10 @@ Camera& Camera::operator=(const Camera& camera)
     if (this != &camera)
     {
         m_position = camera.m_position;
-        m_front = camera.m_front;
+        m_forward = camera.m_forward;
         m_up = camera.m_up;
-        m_world_up = camera.m_world_up;
         m_right = camera.m_right;
+        m_world_up = camera.m_world_up;
         m_yaw = camera.m_yaw;
         m_pitch = camera.m_pitch;
         m_zoom = camera.m_zoom;
@@ -90,16 +90,16 @@ Camera& Camera::operator=(const Camera& camera)
 
 // move operator
 Camera::Camera(Camera&& camera) noexcept
-    : m_position(camera.m_position), m_front(camera.m_front), m_up(camera.m_up), m_world_up(camera.m_world_up),
-      m_right(camera.m_right), m_yaw(camera.m_yaw), m_pitch(camera.m_pitch), m_speed(camera.m_speed),
+    : m_position(camera.m_position), m_forward(camera.m_forward), m_up(camera.m_up), m_right(camera.m_right), 
+      m_world_up(camera.m_world_up), m_yaw(camera.m_yaw), m_pitch(camera.m_pitch), m_speed(camera.m_speed),
       m_zoom(camera.m_zoom), m_aspect(camera.m_aspect), m_nearZ(camera.m_nearZ), m_farZ(camera.m_farZ),
       m_viewMatrix(camera.m_viewMatrix), m_projMatrix(camera.m_projMatrix)
 {
     camera.m_position = glm::vec3(0.0f, 0.0f, 0.0f);
-    camera.m_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    camera.m_forward = glm::vec3(0.0f, 0.0f, -1.0f);
     camera.m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-    camera.m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     camera.m_right = glm::vec3(1.0f, 0.0f, 0.0f);
+    camera.m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     camera.m_yaw = c_YAW;
     camera.m_pitch = c_PITCH;
     camera.m_zoom = c_ZOOM;
@@ -116,10 +116,10 @@ Camera& Camera::operator=(Camera&& camera) noexcept
     if (this != &camera)
     {
         m_position = camera.m_position;
-        m_front = camera.m_front;
+        m_forward = camera.m_forward;
         m_up = camera.m_up;
-        m_world_up = camera.m_world_up;
         m_right = camera.m_right;
+        m_world_up = camera.m_world_up;
         m_yaw = camera.m_yaw;
         m_pitch = camera.m_pitch;
         m_aspect = camera.m_aspect;
@@ -130,17 +130,20 @@ Camera& Camera::operator=(Camera&& camera) noexcept
 
         // null initialize the other camera
         camera.m_position = glm::vec3(0.0f, 0.0f, 0.0f);
-        camera.m_front = glm::vec3(0.0f, 0.0f, -1.0f);
+        camera.m_forward = glm::vec3(0.0f, 0.0f, -1.0f);
         camera.m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-        camera.m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
         camera.m_right = glm::vec3(1.0f, 0.0f, 0.0f);
+        camera.m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+
         camera.m_yaw = c_YAW;
         camera.m_pitch = c_PITCH;
-        camera.m_zoom = c_ZOOM;
         camera.m_speed = c_SPEED;
+
+        camera.m_zoom = c_ZOOM;
         camera.m_aspect = 1.0f;
         camera.m_nearZ = 0.1f;
         camera.m_farZ = 100.0f;
+
         camera.m_viewMatrix = glm::mat4(1.0f);
         camera.m_projMatrix = glm::mat4(1.0f);
     }
@@ -180,7 +183,7 @@ glm::vec3 Camera::GetRight() const
 
 glm::vec3 Camera::GetForward() const
 {
-    return m_front;
+    return m_forward;
 }
 
 float Camera::GetYaw() const
@@ -215,7 +218,7 @@ void Camera::SetRight(const glm::vec3& right)
 
 void Camera::SetForward(const glm::vec3& forward)
 {
-    m_front = forward;
+    m_forward = forward;
 }
 
 void Camera::SetAspectRatio(float aspect)
@@ -235,7 +238,7 @@ void Camera::SetZoomFov(float zoom)
 void Camera::Translate(glm::vec3 translation)
 {
     m_position += translation;
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
 }
 
 // rotate in view space
@@ -252,7 +255,7 @@ void Camera::Rotate(float yaw, float pitch)
     m_pitch += pitch;
     m_yaw = glm::mod(m_yaw, 360.0f); // limit to 2 rad
     m_pitch = glm::clamp(m_pitch, -89.0f, 89.0f); // clamp pitch to not gimbal lock
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
 }
 
 // zoom in by changing the fov
@@ -266,22 +269,30 @@ void Camera::Zoom(float zoom)
 // move along the forward vector by a factor of distance
 void Camera::MoveForward(float distance)
 {
-    m_position += m_front * distance;
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_position += m_forward * distance;
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
 }
 
 // move along the right vector by a factor of distance
 void Camera::MoveRight(float distance)
 {
     m_position += m_right * distance;
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
 }
 
 // move along the Up vector by a factor of distance
 void Camera::MoveUp(float distance)
 {
     m_position += m_up * distance;
-    m_viewMatrix = glm::lookAt(m_position, m_position + m_front, m_up);
+    m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
+}
+
+void Camera::Update(float)
+{
+    // update the camera's matrices
+	UpdateCameraVectors();
+	UpdateViewMatrix();
+	UpdateProjectionMatrix();
 }
 
 // void Camera::ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch)
@@ -296,14 +307,24 @@ void Camera::MoveUp(float distance)
 void Camera::UpdateCameraVectors()
 {
     // calculate the new front vector
-    glm::vec3 front;
-    front.x = cos(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
-    front.y = sin(glm::radians(m_pitch));
-    front.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
-    m_front = glm::normalize(front);
-    // also re-calculate the right and up vector
-    m_right = glm::normalize(glm::cross(m_front, m_world_up));
-    // normalize the vectors, because their length gets closer to 0 the more you look up
-    // or down, which results in slower movement
-    m_up = glm::normalize(glm::cross(m_right, m_front));
+    glm::vec3 forward(0.f);
+    forward.x = cos(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+    forward.y = sin(glm::radians(m_pitch));
+    forward.z = sin(glm::radians(m_yaw)) * cos(glm::radians(m_pitch));
+    m_forward = glm::normalize(forward);
+
+	// recalculate right and up, normalizing them to ensure the vectors are always unit length
+    m_right = glm::normalize(glm::cross(m_forward, m_world_up));
+    m_up = glm::normalize(glm::cross(m_right, m_forward));
 }
+
+void Camera::UpdateViewMatrix()
+{
+	m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
+}
+
+void Camera::UpdateProjectionMatrix()
+{
+	m_projMatrix = glm::perspective(glm::radians(m_zoom), m_aspect, m_nearZ, m_farZ);
+}
+

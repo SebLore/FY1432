@@ -224,7 +224,8 @@ void Application::RenderImGui() {
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-	ImGuiIO& io = ImGui::GetIO();
+	// TODO: Handle ImGui input events
+	/*ImGuiIO& io = ImGui::GetIO();*/
 }
 
 
@@ -299,16 +300,23 @@ void Application::Run() {
 
 	auto lastTime = std::chrono::high_resolution_clock::now();
 
-	while (m_isRunning && !m_window->ShouldClose()) {
+	
+	// main window loop
+	while (m_isRunning && !m_window->ShouldClose()) 
+	{
 		auto currentTime = std::chrono::high_resolution_clock::now();
 		float deltaTime = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - lastTime).count();
 		lastTime = currentTime;
 
 		glfwPollEvents(); // Poll events at the start of the frame
 
-		ProcessInput(deltaTime);
-		Update(deltaTime);
-		Render();
+		// application bits
+		{
+			std::cout << "Pretending to render...\n";
+			//ProcessInput(deltaTime);
+			//Update(deltaTime);
+			//Render();
+		}
 
 		m_window->SwapBuffers();
 	}

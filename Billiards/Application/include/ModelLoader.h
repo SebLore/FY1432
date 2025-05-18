@@ -11,7 +11,6 @@ struct aiNode;
 struct aiScene;
 struct aiMesh;
 struct aiMaterial;
-enum class aiTextureType;
 
 class ModelLoader
 {

@@ -8,7 +8,7 @@
 constexpr float c_YAW = -90.0f; // points towards negative Z
 constexpr float c_PITCH = 0.0f; // pitch
 constexpr float c_SPEED = 2.5f; // travel speed
-constexpr float c_SENSITIVITY = 0.1f; // mouse sense
+constexpr float c_SENSITIVITY = 0.1f; // mouse sensitivity
 constexpr float c_ZOOM = 45.0f; // FOV
 
 class Camera
@@ -50,23 +50,38 @@ public:
 	void MoveRight(float distance);
 	void MoveUp(float distance);
 
+	void Update(float delta = 0.0f);
+
 	// TODO: implement these functions
 	// void ProcessMouseMovement(float xoffset, float yoffset, bool constrainPitch = true);
 	// void ProcessMouseScroll(float yoffset);
-	void UpdateCameraVectors();
 private:
+	void UpdateViewMatrix();
+	void UpdateProjectionMatrix();
+	void UpdateCameraVectors();
+
+    // camera view space attributes
     glm::vec3 m_position = glm::vec3(0, 0, 0);
-    glm::vec3 m_front = glm::vec3(0.0f, 0.0f, -1.0f);
+    glm::vec3 m_forward = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 m_up = glm::vec3(0.0f, 1.0f, 0.0f);
-    glm::vec3 m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
     glm::vec3 m_right = glm::vec3(0, 0, 1);
-    float m_yaw = -90.0f;
+
+	// camera world space attributes
+    glm::vec3 m_world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+
+	// euler angles, default to looking down the -Z axis
+	float m_yaw = -90.0f;
     float m_pitch = 0.0f;
-	float m_speed = 2.5f;
-	float m_zoom = 45.0f; // FOV Y
+
+	// projection
+    float m_zoom = 45.0f; // FOV Y
 	float m_aspect = 1.0f;
 	float m_nearZ = 0.1f;
 	float m_farZ = 100.0f;
+
+	// camera settings
+    float m_speed = 2.5f;
+	float m_sensitivity = 0.1f;
 
 	glm::mat4x4 m_viewMatrix = glm::mat4(1.0f);
 	glm::mat4x4 m_projMatrix = glm::mat4(1.0f);

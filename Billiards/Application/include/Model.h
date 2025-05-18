@@ -36,8 +36,8 @@ private:
     std::string m_directory;
 
     // transform
-    glm::vec3 m_scale;
-    glm::vec3 m_rotation;
     glm::vec3 m_position;
+    glm::vec3 m_rotation;
+    glm::vec3 m_scale;
     glm::mat4x4 m_transform;
 };

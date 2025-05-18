@@ -2,19 +2,21 @@
 #include "Model.h"
 #include "Mesh.h"
 
+#include <iostream>
+#include <utility> // std::move
+
 // assimp
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
-#include <iostream>
-#include <utility> // std::move
 
 using namespace Assimp;
 
 std::unique_ptr<Model> ModelLoader::LoadModel(const std::string& path)
 {   
-    Importer importer;
+    ASSIMP_API Importer importer;
+
     const aiScene* scene = importer.ReadFile(
         path,
         aiProcessPreset_TargetRealtime_Quality | aiProcess_ValidateDataStructure
