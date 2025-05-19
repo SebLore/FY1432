@@ -1,57 +1,55 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
+#include <vector>
+
+#include <glad/gl.h>
 #include <glm/glm.hpp> // For glm types used in uniform setters
 
-// Forward declare GLAD's types if not including glad.h here (though often simpler to include)
-// If you don't include glad.h, you'd need: typedef unsigned int GLuint; etc.
-// It's often okay to include glad.h in utility headers like this.
-#include <glad/gl.h>
-
+struct ShaderConfig
+{
+    std::unordered_map<std::string, std::string> defines; // <shader, define> TODO: implement this in compileShader to pass custom defines to the shader.
+    bool verboseCompileErrors = true;
+};
 
 class Shader
 {
 public:
-    // Program ID
-    unsigned int ID = 0;
 
-    // Constructor reads and builds the shader
-    Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
-    // Destructor
+    Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr, const ShaderConfig &config = ShaderConfig());
     ~Shader();
 
     // Prevent copying/moving
     Shader(const Shader&) = delete;
     Shader& operator=(const Shader&) = delete;
-    Shader(Shader&& other) noexcept : ID(other.ID) { other.ID = 0; } // Allow move
+    Shader(Shader&& other) noexcept : m_ID(other.m_ID) { other.m_ID = 0; } // Allow move
     Shader& operator=(Shader&& other) noexcept {
         if (this != &other) {
-            glDeleteProgram(ID);
-            ID = other.ID;
-            other.ID = 0;
+            glDeleteProgram(m_ID);
+            m_ID = other.m_ID;
+            other.m_ID = 0;
         }
         return *this;
     }
 
-
     // Use/activate the shader
     void Use() const;
 
-    // Utility uniform functions
-    void SetBool(const std::string& name, bool value) const;
-    void SetInt(const std::string& name, int value) const;
-    void SetFloat(const std::string& name, float value) const;
-    void SetVec2(const std::string& name, const glm::vec2& value) const;
-    void SetVec2(const std::string& name, float x, float y) const;
-    void SetVec3(const std::string& name, const glm::vec3& value) const;
-    void SetVec3(const std::string& name, float x, float y, float z) const;
-    void SetVec4(const std::string& name, const glm::vec4& value) const;
-    void SetVec4(const std::string& name, float x, float y, float z, float w) const;
-    void SetMat2(const std::string& name, const glm::mat2& mat) const;
-    void SetMat3(const std::string& name, const glm::mat3& mat) const;
-    void SetMat4(const std::string& name, const glm::mat4& mat) const;
+    unsigned int GetID()const { return m_ID; }
+
+    void SetBool(const std::string& name, bool value) const { glUniform1i(glGetUniformLocation(m_ID, name.c_str()), (int)value); }
+    void SetInt(const std::string& name, int value) const { glUniform1i(glGetUniformLocation(m_ID, name.c_str()), value); }
+    void SetFloat(const std::string& name, float value) const { glUniform1f(glGetUniformLocation(m_ID, name.c_str()), value); }
+    void SetVec3(const std::string& name, const glm::vec3& value) const { glUniform3fv(glGetUniformLocation(m_ID, name.c_str()), 1, &value[0]); }
+    void SetMat4(const std::string& name, const glm::mat4& mat) const { glUniformMatrix4fv(glGetUniformLocation(m_ID, name.c_str()), 1, GL_FALSE, &mat[0][0]); }
 
 private:
-    // Utility function for checking shader compilation/linking errors.
-    void checkCompileErrors(GLuint shader, std::string type);
+    ::GLuint m_ID = 0;
+    ShaderConfig m_config;
+
+    std::string loadSource(const std::string& path)const;
+	GLuint compileShader(const std::string& source, ::GLenum type)const;
+    bool linkProgram(GLuint vertID, GLuint fragID, GLuint geoID);
+    bool checkCompileErrors(GLuint object, const std::string& type)const;
 };

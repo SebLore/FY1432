@@ -17,10 +17,8 @@ std::unique_ptr<Model> ModelLoader::LoadModel(const std::string& path)
 	const aiScene* scene = importer.ReadFile(path,
 		aiProcess_Triangulate |
 		aiProcess_GenSmoothNormals |
-		aiProcess_CalcTangentSpace |
 		aiProcess_JoinIdenticalVertices |
 		aiProcess_ImproveCacheLocality |
-		aiProcess_LimitBoneWeights |
 		aiProcess_SplitLargeMeshes |
 		aiProcess_PreTransformVertices |
 		aiProcess_ValidateDataStructure);

@@ -62,7 +62,8 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 
 		// 1. Initialize GLFW
 		glfwSetErrorCallback(Window::GlfwErrorCallback);
-		if (!glfwInit()) {
+		if (!glfwInit()) 
+		{
 			throw std::runtime_error("Failed to initialize GLFW");
 		}
 		std::cout << "GLFW initialized successfully." << std::endl;
@@ -124,7 +125,8 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 
 }
 
-void Application::ShutdownSubsystems() {
+void Application::ShutdownSubsystems() 
+{
 	if (m_isRunning || m_window) { // make sure shutdown happens if instance was created
 		std::cout << "Shutting down application subsystems..." << std::endl;
 		ShutdownImGui();
@@ -133,7 +135,6 @@ void Application::ShutdownSubsystems() {
 	m_modelShader.reset();
 
 	// m_window will destruct itself and terminate GLFW
-
 }
 
 bool Application::glfwInitState()
@@ -143,13 +144,15 @@ bool Application::glfwInitState()
 
 void Application::InitializeShaders()
 {
-	try {
+	try 
+	{
 		m_modelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
 		std::cout << "Model shader loaded successfully." << std::endl;
 	}
-	catch (const std::exception& e) {
+	catch (const std::exception& e) 
+	{
 		std::cerr << "Failed to load model shader: " << e.what() << std::endl;
-		// Handle error, perhaps rethrow or set a bad state
+		throw;
 	}
 }
 
@@ -157,7 +160,7 @@ void Application::InitResources(int width, int height)
 {
 	try
 	{
-		m_camera = std::make_unique<Camera>(width, height, 0.1f, 100.0f);
+		m_camera = std::make_unique<Camera>(static_cast<float>(width), static_cast<float>(height), 0.1f, 100.0f);
 		m_model = ModelLoader::LoadModel("assets/geometry/teapot.obj");
 		if (!m_model)
 		{
