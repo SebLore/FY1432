@@ -5,8 +5,8 @@ layout (location = 1) in vec2 aTexCoords;
 layout (location = 2) in vec3 aNormal;
 
 uniform mat4 uModel; // from model's transform
-uniform mat4 uViewProjp; // camera's view * projection
-uniform mat3 uViewPos;
+uniform mat4 uViewProj; // camera's view * projection
+uniform vec3 uViewPos;
 
 
 out vec3 vWorldPos;       // Vertex position in world space
@@ -18,7 +18,7 @@ void main()
 {
     vec4 worldPos = uModel * vec4(aPosition, 1.0f);
     vWorldPos = worldPos.xyz;
-    vUV = aUV;
+    vTexCoords = aTexCoords;
     vNormal = mat3(uModel) * aNormal;
     vViewDir = uViewPos - worldPos.xyz;
 

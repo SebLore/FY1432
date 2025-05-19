@@ -1,5 +1,7 @@
 #include "Camera.h"
 
+#include <iostream>
+
 Camera::Camera()
 {
     // initialize Camera with default values: up y+, right x+, forward z-
@@ -270,6 +272,11 @@ void Camera::Zoom(float zoom)
 void Camera::MoveForward(float distance)
 {
     m_position += m_forward * distance;
+
+    // DEBUG: Print position
+	std::cout << "Camera position: " << m_position.x << ", " << m_position.y << ", " << m_position.z << std::endl;
+
+	// update the view matrix
     m_viewMatrix = glm::lookAt(m_position, m_position + m_forward, m_up);
 }
 

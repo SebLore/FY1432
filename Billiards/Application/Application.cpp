@@ -226,14 +226,20 @@ void Application::RenderImGui() {
 	/*ImGuiIO& io = ImGui::GetIO();*/
 }
 
-
-
 void Application::ProcessInput(float deltaTime) {
 	if (glfwGetKey(m_window->GetNativeHandle(), GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(m_window->GetNativeHandle(), true);
 	}
 
 	// TODO: implement camera controls
+	// W to move camera forward
+	if (glfwGetKey(m_window->GetNativeHandle(), GLFW_KEY_W) == GLFW_PRESS) {
+		m_camera->MoveForward(deltaTime);
+	}
+	// S to move camera backward
+	if (glfwGetKey(m_window->GetNativeHandle(), GLFW_KEY_S) == GLFW_PRESS) {
+		m_camera->MoveForward(-deltaTime);
+	}
 }
 
 void Application::Update(float deltaTime)
@@ -246,18 +252,18 @@ void Application::Render() {
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Add GL_DEPTH_BUFFER_BIT if doing 3D
 
-	// --- Render the model ---
+	// --- Apply shader and set uniforms ---
 	m_modelShader->Use();
-	glm::mat4 view = m_camera->GetViewMatrix();
-	glm::mat4 projection = m_camera->GetProjectionMatrix();
-	glm::mat4 model = glm::mat4(1.0f); // Identity matrix
-	glm::mat4 mvp = projection * view * model; // Model-View-Projection matrix
-	m_modelShader->SetMat4("u_MVP", mvp);
-	m_modelShader->SetVec3("u_viewPos", m_camera->GetPosition());
 
+	m_modelShader->SetMat4("uViewProj", m_camera->GetViewProjectionMatrix());
+	m_modelShader->SetMat4("uModel", m_model->GetTransform());
+	m_modelShader->SetVec3("uViewPos", m_camera->GetPosition());
+
+	// --- Do draw calls here
 	m_model->Draw(); // Draw the model
-	// -----------------------
 
+
+	// --- Render ImGui UI ---
 	RenderImGui(); // this handles ImGui::Render() and drawing the data, also ends the ImGui frame
 }
 
