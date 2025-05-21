@@ -62,7 +62,7 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 
 		// 1. Initialize GLFW
 		glfwSetErrorCallback(Window::GlfwErrorCallback);
-		if (!glfwInit()) 
+		if (!glfwInit())
 		{
 			throw std::runtime_error("Failed to initialize GLFW");
 		}
@@ -125,7 +125,7 @@ void Application::InitializeSubsystems(int windowWidth, int windowHeight, const 
 
 }
 
-void Application::ShutdownSubsystems() 
+void Application::ShutdownSubsystems()
 {
 	if (m_isRunning || m_window) { // make sure shutdown happens if instance was created
 		std::cout << "Shutting down application subsystems..." << std::endl;
@@ -144,12 +144,12 @@ bool Application::glfwInitState()
 
 void Application::InitializeShaders()
 {
-	try 
+	try
 	{
 		m_modelShader = std::make_unique<Shader>("shaders/model.vert", "shaders/model.frag");
 		std::cout << "Model shader loaded successfully." << std::endl;
 	}
-	catch (const std::exception& e) 
+	catch (const std::exception& e)
 	{
 		std::cerr << "Failed to load model shader: " << e.what() << std::endl;
 		throw;
@@ -161,6 +161,7 @@ void Application::InitResources(int width, int height)
 	try
 	{
 		m_camera = std::make_unique<Camera>(static_cast<float>(width), static_cast<float>(height), 0.1f, 100.0f);
+		m_camera->SetPosition(0.0f, 5.0f, 20.0f);
 		m_model = ModelLoader::LoadModel("assets/geometry/teapot.obj");
 		if (!m_model)
 		{
@@ -216,14 +217,25 @@ void Application::RenderImGui() {
 	}
 	ImGui::Begin("My Application Controls");
 	ImGui::Text("Hello from Application class!");
+
+	// -- Model controls --
+	auto& modelTransform = m_model->GetTransform();
+	ImGui::Text("Model Position");
+	ImGui::DragFloat3("Position", &modelTransform.position.x, 0.1f);
+	ImGui::Text("Model Rotation");
+	ImGui::DragFloat3("Rotation", &modelTransform.rotation.x, 0.1f);
+	ImGui::Text("Model Scale");
+	ImGui::DragFloat3("Scale", &modelTransform.scale.x, 0.1f);
+	//modelTransform.Update(); // update the model matrix after changing the transform
+
 	ImGui::Checkbox("Show ImGui Demo Window", &m_showDemoWindow);
 	ImGui::End();
 
+
+	// -- Render GUI --
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-	// TODO: Handle ImGui input events
-	/*ImGuiIO& io = ImGui::GetIO();*/
 }
 
 void Application::ProcessInput(float deltaTime) {
@@ -245,6 +257,7 @@ void Application::ProcessInput(float deltaTime) {
 void Application::Update(float deltaTime)
 {
 	// TODO: add model update loop
+	m_model->Update(deltaTime); // update the model transform
 }
 
 void Application::Render() {
@@ -256,7 +269,7 @@ void Application::Render() {
 	m_modelShader->Use();
 
 	m_modelShader->SetMat4("uViewProj", m_camera->GetViewProjectionMatrix());
-	m_modelShader->SetMat4("uModel", m_model->GetTransform());
+	m_modelShader->SetMat4("uModel", m_model->GetModelMatrix());
 	m_modelShader->SetVec3("uViewPos", m_camera->GetPosition());
 
 	// --- Do draw calls here

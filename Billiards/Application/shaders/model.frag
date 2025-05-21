@@ -1,4 +1,4 @@
-﻿#version 460 core
+#version 460 core
 
 in vec3 vWorldPos;
 in vec2 vTexCoords;
@@ -29,5 +29,6 @@ void main()
 
     vec3 diffuse = uLightColor * D * uLightIntensity;
 
+    finalColor = vec4(vWorldPos, 1.0);
     finalColor = vec4(diffuse, 1.0);
 }

@@ -203,9 +203,18 @@ float Camera::GetZoom() const
     return m_zoom;
 }
 
+void Camera::SetPosition(float x, float y, float z)
+{
+	m_position = glm::vec3(x, y, z);
+	// update the view matrix
+	UpdateViewMatrix();
+}
+
 void Camera::SetPosition(const glm::vec3& position)
 {
     m_position = position;
+
+    UpdateViewMatrix();
 }
 
 void Camera::SetUp(const glm::vec3& up)

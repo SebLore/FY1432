@@ -11,6 +11,36 @@ constexpr float c_SPEED = 2.5f; // travel speed
 constexpr float c_SENSITIVITY = 0.1f; // mouse sensitivity
 constexpr float c_ZOOM = 45.0f; // FOV
 
+struct CameraProperties
+{
+	glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::vec3 forward = glm::vec3(0.0f, 0.0f, -1.0f);
+	glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);
+	glm::vec3 right = glm::vec3(1.0f, 0.0f, 0.0f);
+	glm::vec3 world_up = glm::vec3(0.0f, 1.0f, 0.0f);
+	float yaw = c_YAW;
+	float pitch = c_PITCH;
+	float speed = c_SPEED;
+	float sensitivity = c_SENSITIVITY;
+	float zoom = c_ZOOM;
+
+	float aspect = 1.0f;
+	float nearZ = 0.1f;
+	float farZ = 100.0f;
+
+	glm::mat4x4 viewMatrix = glm::mat4(1.0f);
+	glm::mat4x4 projMatrix = glm::mat4(1.0f);
+	glm::mat4x4 viewProjectionMatrix = glm::mat4(1.0f);
+
+	void UpdateViewMatrix()
+	{
+		viewMatrix = glm::lookAt(position, position + forward, up);
+	}
+	void UpdateProjectionMatrix()
+	{
+		projMatrix = glm::perspective(glm::radians(zoom), aspect, nearZ, farZ);
+	}
+};
 class Camera
 {
 public:
@@ -34,6 +64,7 @@ public:
 	float GetPitch()const;
 	float GetZoom()const;
 
+	void SetPosition(float x, float y, float z);
     void SetPosition(const glm::vec3 &position);
     void SetUp(const glm::vec3 &up);
     void SetRight(const glm::vec3 &right);
